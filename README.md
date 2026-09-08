@@ -9,7 +9,7 @@ It tracks your hand in real-time via the front-facing camera, draws a smooth flo
 - **Real-Time Hand Tracking:** Powered by Google's MediaPipe Hand Landmarker (LIVE_STREAM mode) for ultra-low latency, 60fps tracking.
 - **Dynamic Cursor Overlay:** A globally visible cursor drawn using WindowManager that floats on top of the entire OS.
 - **Smart Pinch Detection (Hysteresis):** Pinch your thumb and index finger to click. The app uses hysteresis to prevent "flickering" pinches, allowing you to easily hold and drag.
-- **Advanced Gesture Dispatching:** Automatically translates your hand's path into Android GestureDescription strokes, allowing you to scroll feeds, swipe between screens, and drag items.
+- **Advanced Gesture Dispatching:** Automatically translates your hand's path into Android GestureDescription strokes
 - **Ergonomic Sensitivity:** The tracking maps a small central "active box" from the camera view to the entire bounds of the device screen, meaning you only need to make small wrist movements to reach all edges.
 - **Zero-Crash Native Setup:** Custom Android configuration completely disables R8 minification and resource shrinking to ensure MediaPipe's C++ reflection engine runs flawlessly without throwing IllegalStateException or UnsatisfiedLinkError.
 
@@ -29,14 +29,10 @@ This project uses a hybrid architecture:
 3. Plug in your Android device (Android 8.0+ recommended).
 4. Run the following command:
 
-`ash
+`Bash
 flutter build apk
 flutter install
 `
-
-### Note for Developers
-When building the APK, it is **critical** that isMinifyEnabled = false and isShrinkResources = false remain in ndroid/app/build.gradle.kts, and 
-oCompress("tflite", "task") remains active. MediaPipe will fatally crash the app via native SIGSEGV or JNI reflection errors if these are altered.
 
 ## License
 
