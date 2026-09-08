@@ -1,0 +1,4 @@
+-keep class com.google.mediapipe.** { *; }
+-dontwarn com.google.mediapipe.**
+-keep class androidx.camera.** { *; }
+-keep class com.aliplayz.air_control.** { *; }

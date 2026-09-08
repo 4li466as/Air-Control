@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_description">Air Control requires accessibility access to move the cursor and inject clicks based on your hand gestures.</string>
+</resources>
